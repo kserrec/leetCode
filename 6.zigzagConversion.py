@@ -26,6 +26,11 @@ def conversion(s, numRows):
           resultString = resultString + char
     return resultString
 
+  # trivial case
+  if numRows == 1: 
+    return s
+    
+  # otherwise
   return makeResultStringFromGrid(makeGrid(s, numRows))
         
 
