@@ -22,7 +22,7 @@ def isIntPalindrome(x):
     # get length of integer
     def intLength(y):
         n = 0
-        while y > 1:
+        while y >= 1:
             y = y / 10
             n = n + 1
         return n
@@ -55,5 +55,5 @@ def isIntPalindrome(x):
 
     return isPalindrome(arr, revArr)
 
-print(isIntPalindrome(10))
+print(isIntPalindrome(100))
         
