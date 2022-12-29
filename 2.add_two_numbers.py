@@ -132,39 +132,39 @@ class Solution:
 
 # This solution has a time complexity of O(n) and a space complexity of O(n), where n is the number of digits in the sum of the input integers. The conversion of the linked lists to integers and back again adds some additional overhead, but this may be acceptable depending on the constraints of the problem.
 
-# class Solution:
-#     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
-#         # convert the input linked lists to integers
-#         num1 = self.linked_list_to_int(l1)
-#         num2 = self.linked_list_to_int(l2)
+class Solution:
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+        # convert the input linked lists to integers
+        num1 = self.linked_list_to_int(l1)
+        num2 = self.linked_list_to_int(l2)
 
-#         # convert the result back to a linked list
-#         return self.int_to_linked_list(num1 + num2)
+        # convert the result back to a linked list
+        return self.int_to_linked_list(num1 + num2)
 
-#     def linked_list_to_int(self, node: ListNode) -> int:
-#         # create a list of the node values in reverse order
-#         values = []
-#         while node:
-#             values.append(str(node.val))
-#             node = node.next
+    def linked_list_to_int(self, node: ListNode) -> int:
+        # create a list of the node values in reverse order
+        values = []
+        while node:
+            values.append(str(node.val))
+            node = node.next
 
-#         # join the values in reverse order and convert to int
-#         return int(''.join(reversed(values)))
+        # join the values in reverse order and convert to int
+        return int(''.join(reversed(values)))
 
-#     def int_to_linked_list(self, num: int) -> ListNode:
-#         # convert the integer to a list of digits in reverse order
-#         digits = [int(d) for d in str(num)][::-1]
-#         digitsLen = len(digits)
+    def int_to_linked_list(self, num: int) -> ListNode:
+        # convert the integer to a list of digits in reverse order
+        digits = [int(d) for d in str(num)][::-1]
+        digitsLen = len(digits)
 
-#         # create the output linked list
-#         output = current = ListNode()
-#         for i, digit in enumerate(digits):
-#             current.val = digit
-#             if not i == digitsLen - 1:
-#                 current.next = ListNode()
-#                 current = current.next
+        # create the output linked list
+        output = current = ListNode()
+        for i, digit in enumerate(digits):
+            current.val = digit
+            if not i == digitsLen - 1:
+                current.next = ListNode()
+                current = current.next
 
-#         return output
+        return output
 
 
 add_two_numbers_solver = Solution()
